@@ -1,6 +1,6 @@
 {
   "name": "postcss-math",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "extend PostCSS plugin to reduce calc()",
   "main": "index.js",
   "scripts": {
