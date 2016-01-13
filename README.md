@@ -63,6 +63,7 @@ h1 {
 	width: calc.max(var(--width),var(--minWidth))
 	padding-left: calc.abs(var(--paddingLeft));
 	height: calc.sqrt(var(--width));
+	padding-right: calc.random(10px);
 }
 ```
 
@@ -72,7 +73,8 @@ you will get:
 h1 {
   width: 200px;
   padding-left: 20px;
-  height:14.1px
+  height:14.1px;
+  padding-right: 9.8px;/**10px*Math.random()**/
 }
 ```
 

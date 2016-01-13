@@ -40,7 +40,12 @@ module.exports = postcss.plugin('postcss-math', function(options) {
 		    }
 			try{
 				if(typeof Math[func]==='function'){
-					var result=Math[func].apply(null,params);					
+					if(func=="random"){
+						var result=Math[func].apply(null,[])*params[0];
+					}else{
+						var result=Math[func].apply(null,params);
+					}
+										
 					result = Math.round(result * decimalPrecision) / decimalPrecision;
 					node[property]=result+unit;
 					return;
