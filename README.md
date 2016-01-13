@@ -38,12 +38,12 @@ var next=require('cssnext')({
 })
 
 // css to be processed
-var cssnext = fs.readFileSync('src/app.next.css', 'utf8');
+var css = fs.readFileSync('src/app.css', 'utf8');
 
 // process css
-postcss([next]).process(cssnext)
+postcss([next]).process(css)
     .then(function (result) {
-        fs.writeFileSync('build/app.next.css', result.css);		
+        fs.writeFileSync('build/app.css', result.css);	
     })
     .catch(function (error) {
     	console.error(error);
@@ -51,7 +51,7 @@ postcss([next]).process(cssnext)
 
 ```
 
-Using this `input.css`:
+Using this `src/app.css`:
 
 ```css
 :root{
@@ -74,7 +74,8 @@ h1 {
   width: 200px;
   padding-left: 20px;
   height:14.1px;
-  padding-right: 9.8px;/**10px*Math.random()**/
+  /**10px*Math.random()**/
+  padding-right: 9.8px;
 }
 ```
 
